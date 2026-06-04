@@ -1,0 +1,373 @@
+:root {
+  color-scheme: dark;
+  color: #f7f7fb;
+  background: #050617;
+  font-family: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  font-size: 16px;
+  line-height: 1.6;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html, body {
+  margin: 0;
+  min-height: 100%;
+}
+
+body {
+  background: radial-gradient(circle at top left, rgba(79, 70, 229, 0.18), transparent 28%),
+    radial-gradient(circle at bottom right, rgba(16, 185, 129, 0.15), transparent 30%),
+    #050617;
+  color: #f7f7fb;
+}
+
+button, input, textarea {
+  font: inherit;
+}
+
+.page-shell {
+  max-width: 1240px;
+  margin: 0 auto;
+  padding: 32px 24px 72px;
+}
+
+.site-header {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  gap: 24px;
+  padding-bottom: 32px;
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.brand-mark {
+  width: 56px;
+  height: 56px;
+  display: grid;
+  place-items: center;
+  border-radius: 18px;
+  background: linear-gradient(135deg, #8b5cf6, #22c55e);
+  color: white;
+  font-size: 1.1rem;
+  font-weight: 800;
+}
+
+.eyebrow {
+  margin: 0;
+  color: #a5b4fc;
+  font-size: 0.88rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.site-header h1 {
+  margin: 0;
+  font-size: 1.3rem;
+}
+
+.nav-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 18px;
+  align-items: center;
+}
+
+.nav-links a {
+  color: #e2e8f0;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.cta-link {
+  padding: 10px 18px;
+  border-radius: 999px;
+  background: rgba(79, 70, 229, 0.2);
+  border: 1px solid rgba(79, 70, 229, 0.35);
+}
+
+.hero-section {
+  display: grid;
+  grid-template-columns: 1.2fr 0.9fr;
+  gap: 32px;
+  align-items: stretch;
+  padding: 48px 0 64px;
+}
+
+.hero-copy {
+  max-width: 680px;
+}
+
+.hero-copy h2 {
+  margin: 16px 0 24px;
+  font-size: clamp(2.6rem, 4vw, 4rem);
+  line-height: 1.02;
+  letter-spacing: -0.05em;
+}
+
+.hero-text {
+  margin: 0 0 34px;
+  color: #cbd5e1;
+  max-width: 620px;
+}
+
+.hero-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 14px;
+}
+
+.button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 50px;
+  border: none;
+  border-radius: 16px;
+  padding: 0 24px;
+  cursor: pointer;
+  transition: transform 180ms ease, box-shadow 180ms ease, background 180ms ease;
+}
+
+.button:hover {
+  transform: translateY(-1px);
+}
+
+.button-primary {
+  background: linear-gradient(135deg, #8b5cf6, #22c55e);
+  color: #ffffff;
+  box-shadow: 0 18px 40px rgba(34, 197, 94, 0.18);
+}
+
+.button-secondary {
+  background: rgba(255, 255, 255, 0.08);
+  color: #e2e8f0;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+}
+
+.hero-panel {
+  display: grid;
+  gap: 20px;
+}
+
+.panel-card {
+  padding: 28px;
+  border-radius: 28px;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.02);
+}
+
+.panel-label {
+  margin: 0 0 12px;
+  color: #93c5fd;
+  font-size: 0.95rem;
+}
+
+.panel-card h3 {
+  margin: 0 0 16px;
+  font-size: 1.35rem;
+}
+
+.panel-card p {
+  margin: 0;
+  color: #cbd5e1;
+}
+
+.panel-stats {
+  display: grid;
+  gap: 14px;
+}
+
+.panel-stats div {
+  display: grid;
+  gap: 8px;
+  padding: 18px 22px;
+  border-radius: 20px;
+  background: rgba(15, 23, 42, 0.85);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.panel-stats span {
+  font-size: 1.55rem;
+  font-weight: 700;
+}
+
+.panel-stats p {
+  margin: 0;
+  color: #94a3b8;
+}
+
+.section-heading {
+  max-width: 680px;
+  margin-bottom: 28px;
+}
+
+.section-heading h2 {
+  margin-top: 14px;
+  font-size: clamp(2rem, 3vw, 2.8rem);
+}
+
+.services-section,
+.work-section,
+.testimonials-section,
+.contact-section {
+  padding: 64px 0;
+}
+
+.service-grid,
+.work-grid,
+.testimonial-grid,
+.contact-grid {
+  display: grid;
+  gap: 24px;
+}
+
+.service-grid {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.service-card,
+.work-card,
+.testimonial-card {
+  padding: 28px;
+  border-radius: 28px;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.service-card h3,
+.work-card h3 {
+  margin-top: 0;
+  margin-bottom: 14px;
+  font-size: 1.2rem;
+}
+
+.service-card p,
+.work-card p,
+.testimonial-card p,
+.contact-copy p {
+  margin: 0;
+  color: #cbd5e1;
+}
+
+.work-grid {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.work-tag {
+  display: inline-flex;
+  padding: 8px 12px;
+  border-radius: 999px;
+  background: rgba(79, 70, 229, 0.15);
+  color: #a5b4fc;
+  font-size: 0.85rem;
+  margin-bottom: 14px;
+}
+
+.testimonial-grid {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.testimonial-card {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.testimonial-card footer {
+  display: grid;
+  gap: 4px;
+}
+
+.testimonial-card strong {
+  font-size: 1rem;
+}
+
+.testimonial-card span {
+  color: #94a3b8;
+}
+
+.contact-grid {
+  grid-template-columns: 0.95fr 1fr;
+  align-items: start;
+}
+
+.contact-copy ul {
+  margin: 24px 0 0;
+  padding-left: 20px;
+  color: #cbd5e1;
+}
+
+.contact-copy li {
+  margin-bottom: 10px;
+}
+
+.contact-form {
+  display: grid;
+  gap: 18px;
+}
+
+.contact-form label {
+  display: grid;
+  gap: 10px;
+  font-weight: 500;
+  color: #f8fafc;
+}
+
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
+  border-radius: 18px;
+  border: 1px solid rgba(148, 163, 184, 0.18);
+  background: rgba(15, 23, 42, 0.9);
+  color: #f8fafc;
+  padding: 16px 18px;
+  outline: none;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+  border-color: #8b5cf6;
+  box-shadow: 0 0 0 3px rgba(139, 92, 246, 0.18);
+}
+
+@media (max-width: 980px) {
+  .hero-section,
+  .contact-grid,
+  .work-grid,
+  .testimonial-grid,
+  .service-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .page-shell {
+    padding: 28px 18px 48px;
+  }
+}
+
+@media (max-width: 680px) {
+  .site-header {
+    justify-content: center;
+    text-align: center;
+  }
+
+  .nav-links {
+    justify-content: center;
+  }
+
+  .hero-copy h2 {
+    font-size: 2.4rem;
+  }
+
+  .panel-stats {
+    grid-template-columns: 1fr;
+  }
+}
